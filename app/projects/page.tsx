@@ -1,120 +1,102 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Terminal, ArrowRight, Mail, Github, Linkedin } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-export default function Home() {
+const projects = [
+  {
+    title: "Real-time Fraud Detection System for E-commerce Transactions",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    problem: "Increasing fraudulent transactions leading to significant financial losses and customer trust issues",
+    solution: "Built a real-time fraud detection system using advanced ML algorithms and behavioral analytics, reducing fraud by 89% while maintaining legitimate transaction flow",
+    tools: ["Python", "TensorFlow", "Apache Kafka", "MongoDB"]
+  },
+  {
+    title: "Predictive Analytics for Healthcare Patient Readmission Rates",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop",
+    problem: "High patient readmission rates leading to increased healthcare costs and reduced hospital efficiency",
+    solution: "Developed predictive analytics model to identify high-risk patients, enabling proactive interventions and reducing readmission rates by 42%",
+    tools: ["Python", "Scikit-learn", "PostgreSQL", "Docker"]
+  },
+  {
+    title: "Supply Chain Demand Forecasting for Manufacturing",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+    problem: "Inaccurate demand forecasting leading to excess inventory and production inefficiencies",
+    solution: "Created ML-based forecasting model using machine learning and time series analysis, improving accuracy by 67%",
+    tools: ["Python", "Time Series Analysis", "Azure"]
+  },
+  {
+    title: "Employee Attrition Prediction for Large Corporations",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop",
+    problem: "High employee turnover leading to increased recruitment costs and loss of productivity",
+    solution: "Implemented predictive model to identify flight risk employees using ML and NLP techniques",
+    tools: ["Python", "NLP", "XGBoost", "AWS"]
+  },
+  {
+    title: "Real-time Traffic Flow Prediction for Urban Planning",
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop",
+    problem: "Urban congestion leading to increased delays and inefficient resource allocation",
+    solution: "Developed real-time traffic prediction system using deep learning and graph neural networks",
+    tools: ["Python", "PyTorch", "Neo4j", "Redis"]
+  }
+];
+
+export default function Projects() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-zinc-900 to-purple-950">
-      <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="text-white text-xl font-bold">AI REPUBLIC</div>
-        <div className="flex gap-6 items-center">
-          <Link href="/" className="text-gray-300 hover:text-white">Home</Link>
-          <Link href="#" className="text-gray-300 hover:text-white">About</Link>
-          <Link href="/projects" className="text-gray-300 hover:text-white">Projects</Link>
-          <Link href="#" className="text-gray-300 hover:text-white">Skills</Link>
-          <Button className="bg-purple-600 hover:bg-purple-700">CONTACT</Button>
-        </div>
-      </nav>
-
-      <section className="container mx-auto px-4 py-20 grid grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <p className="text-purple-400">LET'S COLLABORATE</p>
-          <h1 className="text-6xl font-bold text-white leading-tight">
-            I'M ERWIN CALUAG,<br />
-            AN AI ENGINEER
-          </h1>
-          <p className="text-gray-400 max-w-xl">
-            I employ a range of advanced analytical techniques, including statistical modeling, machine learning, and data analysis to solve complex business problems.
-          </p>
-          <Link href="/projects">
-            <Button className="bg-purple-600 hover:bg-purple-700">
-              VIEW MY PROJECTS
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
-        <div className="flex justify-center items-center">
-          <div className="relative w-96 h-96">
-            <Image
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&fit=crop"
-              alt="Profile"
-              fill
-              className="rounded-3xl object-cover"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-white mb-12">FEATURE PROJECTS</h2>
-        <div className="grid grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold text-white mb-2">ALL PROJECTS</h1>
+        <p className="text-gray-400 mb-12">Exploring the intersection of AI and real-world solutions</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-zinc-900 border-zinc-800 text-white p-6">
-              <div className="relative h-48 mb-6">
+            <div key={index} className="group relative overflow-hidden">
+              <div className="relative h-[300px] w-full">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-cover brightness-50 group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-4">{project.title}</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="text-purple-400 font-semibold mb-1">PROBLEM:</h4>
+                        <p className="text-gray-300 text-sm">{project.problem}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-purple-400 font-semibold mb-1">SOLUTION:</h4>
+                        <p className="text-gray-300 text-sm">{project.solution}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tools.map((tool, toolIndex) => (
+                        <span 
+                          key={toolIndex}
+                          className="text-xs px-2 py-1 rounded-full bg-purple-900/50 text-purple-300"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                    <Button 
+                      className="w-full bg-purple-600 hover:bg-purple-700"
+                    >
+                      VIEW PROJECT
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold mb-2">PROBLEM:</h3>
-              <p className="text-gray-400 mb-4">{project.problem}</p>
-              <h3 className="text-lg font-semibold mb-2">SOLUTION:</h3>
-              <p className="text-gray-400 mb-6">{project.solution}</p>
-              <Link href="/projects">
-                <Button variant="outline" className="w-full border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white">
-                  VIEW PROJECT
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </Card>
+            </div>
           ))}
         </div>
-      </section>
-
-      <footer className="container mx-auto px-4 py-8 border-t border-zinc-800">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <Terminal className="text-purple-600" />
-            <span className="text-gray-400">hello@gmail.com</span>
-            <span className="text-gray-400">+63 123 1234 123</span>
-          </div>
-          <div className="text-gray-400">Stay Connected</div>
-          <div className="flex gap-4">
-            <a href="#" className="text-gray-400 hover:text-purple-600">
-              <Github className="h-6 w-6" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-purple-600">
-              <Linkedin className="h-6 w-6" />
-            </a>
-          </div>
-        </div>
-      </footer>
+      </div>
     </main>
   );
 }
-
-const projects = [
-  {
-    title: "Machine Learning-Powered Inventory Optimization",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&fit=crop",
-    problem: "Inefficient stock management leading to lost sales, excess inventory, and stock issues: 41.5%",
-    solution: "Developed an inventory optimization tool using machine learning to forecast demand and optimize stock levels, resulting in a 35% reduction in stockouts and a 40% decrease in holding costs."
-  },
-  {
-    title: "Predictive Model for Reducing Customer Churn",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&fit=crop",
-    problem: "High customer churn rates resulting in revenue loss and decreased acquisition cost: Average churn rate: 26%, Customer acquisition cost: $245 per customer",
-    solution: "Developed a churn prediction model using advanced ML algorithms to identify high-risk customers, achieving targeted retention strategies: This led to a 45% decrease in churn rate and a 30% reduction in acquisition costs."
-  },
-  {
-    title: "Energy Demand Forecasting System",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&fit=crop",
-    problem: "Unreliable energy demand modeling inefficient resource allocation and higher operational costs: Annual energy cost fluctuations: 32%, Peak demand overload: 28%, System outage",
-    solution: "Created an energy consumption forecasting system using ML and IoT, leading to accurate prediction accuracy by 35%. This enabled efficient grid management and a 25% reduction in operational costs."
-  }
-];
