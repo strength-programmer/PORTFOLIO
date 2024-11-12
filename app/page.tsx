@@ -18,7 +18,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="container mx-auto px-4 py-20 grid grid-cols-2 gap-8">
+      <section className="container mx-auto px-32 py-20 grid grid-cols-2 gap-8">
         <div className="space-y-6">
           <p className="text-purple-400">LET'S COLLABORATE</p>
           <h1 className="text-6xl font-bold text-white leading-tight">
@@ -38,7 +38,7 @@ export default function Home() {
         <div className="flex justify-center items-center">
           <div className="relative w-96 h-96">
             <Image
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&fit=crop"
+              src="..\images\Erwin.jpegErwin.jpeg"
               alt="Profile"
               fill
               className="rounded-3xl object-cover"
