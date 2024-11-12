@@ -60,7 +60,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-4">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-purple-400 mb-4">{project.title}</h3>
                     <div className="space-y-4">
                       <div>
                         <h4 className="text-purple-400 font-semibold mb-1">PROBLEM:</h4>

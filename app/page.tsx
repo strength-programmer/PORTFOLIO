@@ -49,10 +49,13 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-white mb-12">FEATURE PROJECTS</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white">FEATURED PROJECTS</h2>
+        </div>
         <div className="grid grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="bg-zinc-900 border-zinc-800 text-white p-6">
+              <h2 className="text-xl font-bold text-purple-400 mb-4">{project.title}</h2>
               <div className="relative h-48 mb-6">
                 <Image
                   src={project.image}
