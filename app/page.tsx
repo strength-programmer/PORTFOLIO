@@ -7,56 +7,60 @@ import { Terminal, ArrowRight, Mail, Github, Linkedin } from 'lucide-react';
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-zinc-900 to-purple-950">
-      <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="text-white text-xl font-bold">AI REPUBLIC</div>
-        <div className="flex gap-6 items-center">
-          <Link href="/" className="text-gray-300 hover:text-white">Home</Link>
-          <Link href="#" className="text-gray-300 hover:text-white">About</Link>
-          <Link href="/projects" className="text-gray-300 hover:text-white">Projects</Link>
-          <Link href="#" className="text-gray-300 hover:text-white">Skills</Link>
-          <Button className="bg-purple-600 hover:bg-purple-700">CONTACT</Button>
+      <nav className="container mx-auto px-4 py-6">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="text-white text-xl font-bold">AI REPUBLIC</div>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 items-center">
+            <Link href="/" className="text-gray-300 hover:text-white">Home</Link>
+            <Link href="#" className="text-gray-300 hover:text-white">About</Link>
+            <Link href="/projects" className="text-gray-300 hover:text-white">Projects</Link>
+            <Link href="#" className="text-gray-300 hover:text-white">Skills</Link>
+            <Button className="bg-purple-600 hover:bg-purple-700">CONTACT</Button>
+          </div>
         </div>
       </nav>
 
-      <section className="container mx-auto px-32 py-20 grid grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <p className="text-purple-400">LET'S COLLABORATE</p>
-          <h1 className="text-6xl font-bold text-white leading-tight">
-            I'M ERWIN CALUAG,<br />
-            AN AI ENGINEER
-          </h1>
-          <p className="text-gray-400 max-w-xl">
-            I employ a range of advanced analytical techniques, including statistical modeling, machine learning, and data analysis to solve complex business problems.
-          </p>
-          <Link href="/projects">
-            <Button className="bg-purple-600 hover:bg-purple-700">
-              VIEW MY PROJECTS
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
-        <div className="flex justify-center items-center">
-          <div className="relative w-96 h-96">
-            <Image
-              src="https://raw.githubusercontent.com/ALGOREX-PH/AI-Republic-Student-Portfolio-Template/refs/heads/main/app/images/Erwin.jpeg"
-              alt="Profile"
-              fill
-              className="rounded-3xl object-cover"
-              priority
-            />
+      <section className="container mx-auto px-4 py-12 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6 text-center lg:text-left">
+            <p className="text-purple-400">LET'S COLLABORATE</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              I'M ERWIN CALUAG,<br />
+              AN AI ENGINEER
+            </h1>
+            <p className="text-gray-400 max-w-xl mx-auto lg:mx-0">
+              I employ a range of advanced analytical techniques, including statistical modeling, machine learning, and data analysis to solve complex business problems.
+            </p>
+            <Link href="/projects">
+              <Button className="bg-purple-600 hover:bg-purple-700">
+                VIEW MY PROJECTS
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+          <div className="flex justify-center items-center">
+            <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+              <Image
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&fit=crop"
+                alt="Profile"
+                fill
+                className="rounded-3xl object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto px-4 py-12 lg:py-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">FEATURED PROJECTS</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">FEATURED PROJECTS</h2>
         </div>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-zinc-900 border-zinc-800 text-white p-6">
+            <Card key={index} className="bg-zinc-900 border-zinc-800 text-white p-4 sm:p-6">
               <h2 className="text-xl font-bold text-purple-400 mb-4">{project.title}</h2>
-              <div className="relative h-48 mb-6">
+              <div className="relative h-40 sm:h-48 mb-6">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -65,11 +69,11 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-lg font-semibold mb-2">PROBLEM:</h3>
-              <p className="text-gray-400 mb-4">{project.problem}</p>
+              <p className="text-gray-400 mb-4 text-sm sm:text-base">{project.problem}</p>
               <h3 className="text-lg font-semibold mb-2">SOLUTION:</h3>
-              <p className="text-gray-400 mb-6">{project.solution}</p>
+              <p className="text-gray-400 mb-6 text-sm sm:text-base">{project.solution}</p>
               <Link href="/projects">
-                <Button variant="outline" className="w-full bg-purple-600 text-white-400 hover:bg-purple-800 hover:text-white">
+                <Button variant="outline" className="w-full border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white">
                   VIEW PROJECT
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -80,19 +84,19 @@ export default function Home() {
       </section>
 
       <footer className="container mx-auto px-4 py-8 border-t border-zinc-800">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
             <Terminal className="text-purple-600" />
-            <span className="text-gray-400">hello@gmail.com</span>
-            <span className="text-gray-400">+63 123 1234 123</span>
+            <span className="text-gray-400 text-sm sm:text-base">hello@gmail.com</span>
+            <span className="text-gray-400 text-sm sm:text-base">+63 123 1234 123</span>
           </div>
-          <div className="text-gray-400">Stay Connected</div>
+          <div className="text-gray-400 text-sm sm:text-base">Stay Connected</div>
           <div className="flex gap-4">
             <a href="#" className="text-gray-400 hover:text-purple-600">
-              <Github className="h-6 w-6" />
+              <Github className="h-5 w-5 sm:h-6 sm:w-6" />
             </a>
             <a href="#" className="text-gray-400 hover:text-purple-600">
-              <Linkedin className="h-6 w-6" />
+              <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />
             </a>
           </div>
         </div>

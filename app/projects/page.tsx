@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
@@ -44,24 +43,14 @@ const projects = [
 export default function Projects() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-zinc-900 to-purple-950">
-        <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="text-white text-xl font-bold">AI REPUBLIC</div>
-        <div className="flex gap-6 items-center">
-          <Link href="/" className="text-gray-300 hover:text-white">Home</Link>
-          <Link href="#" className="text-gray-300 hover:text-white">About</Link>
-          <Link href="/projects" className="text-gray-300 hover:text-white">Projects</Link>
-          <Link href="#" className="text-gray-300 hover:text-white">Skills</Link>
-          <Button className="bg-purple-600 hover:bg-purple-700">CONTACT</Button>
-        </div>
-      </nav>
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-white mb-2">ALL PROJECTS</h1>
-        <p className="text-gray-400 mb-12">Exploring the intersection of AI and real-world solutions</p>
+      <div className="container mx-auto px-4 py-8 sm:py-12">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">ALL PROJECTS</h1>
+        <p className="text-gray-400 mb-8 sm:mb-12">Exploring the intersection of AI and real-world solutions</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden">
-              <div className="relative h-[300px] w-full">
+            <div key={index} className="group relative overflow-hidden rounded-lg">
+              <div className="relative h-[250px] sm:h-[300px] w-full">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -69,23 +58,23 @@ export default function Projects() {
                   className="object-cover brightness-50 group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-xl font-bold text-purple-400 mb-4">{project.title}</h3>
-                    <div className="space-y-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-purple-400 mb-3 sm:mb-4">{project.title}</h3>
+                    <div className="space-y-3 sm:space-y-4">
                       <div>
                         <h4 className="text-purple-400 font-semibold mb-1">PROBLEM:</h4>
-                        <p className="text-gray-300 text-sm">{project.problem}</p>
+                        <p className="text-gray-300 text-xs sm:text-sm">{project.problem}</p>
                       </div>
                       <div>
                         <h4 className="text-purple-400 font-semibold mb-1">SOLUTION:</h4>
-                        <p className="text-gray-300 text-sm">{project.solution}</p>
+                        <p className="text-gray-300 text-xs sm:text-sm">{project.solution}</p>
                       </div>
                     </div>
                   </div>
                   
                   <div>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
                       {project.tools.map((tool, toolIndex) => (
                         <span 
                           key={toolIndex}
@@ -96,7 +85,7 @@ export default function Projects() {
                       ))}
                     </div>
                     <Button 
-                      className="w-full bg-purple-600 hover:bg-purple-700"
+                      className="w-full bg-purple-600 hover:bg-purple-700 text-sm sm:text-base"
                     >
                       VIEW PROJECT
                       <ArrowRight className="ml-2 h-4 w-4" />
