@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Terminal, ArrowRight, Mail, Github, Linkedin } from 'lucide-react';
@@ -9,10 +10,10 @@ export default function Home() {
       <nav className="container mx-auto px-4 py-6 flex justify-between items-center">
         <div className="text-white text-xl font-bold">AI REPUBLIC</div>
         <div className="flex gap-6 items-center">
-          <a href="#" className="text-gray-300 hover:text-white">Home</a>
-          <a href="#" className="text-gray-300 hover:text-white">About</a>
-          <a href="#" className="text-gray-300 hover:text-white">Projects</a>
-          <a href="#" className="text-gray-300 hover:text-white">Skills</a>
+          <Link href="/" className="text-gray-300 hover:text-white">Home</Link>
+          <Link href="#" className="text-gray-300 hover:text-white">About</Link>
+          <Link href="/projects" className="text-gray-300 hover:text-white">Projects</Link>
+          <Link href="#" className="text-gray-300 hover:text-white">Skills</Link>
           <Button className="bg-purple-600 hover:bg-purple-700">CONTACT</Button>
         </div>
       </nav>
@@ -27,10 +28,12 @@ export default function Home() {
           <p className="text-gray-400 max-w-xl">
             I employ a range of advanced analytical techniques, including statistical modeling, machine learning, and data analysis to solve complex business problems.
           </p>
-          <Button className="bg-purple-600 hover:bg-purple-700">
-            VIEW MY PROJECTS
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link href="/projects">
+            <Button className="bg-purple-600 hover:bg-purple-700">
+              VIEW MY PROJECTS
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
         <div className="flex justify-center items-center">
           <div className="relative w-96 h-96">
@@ -62,10 +65,12 @@ export default function Home() {
               <p className="text-gray-400 mb-4">{project.problem}</p>
               <h3 className="text-lg font-semibold mb-2">SOLUTION:</h3>
               <p className="text-gray-400 mb-6">{project.solution}</p>
-              <Button variant="outline" className="border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white">
-                VIEW MY PROJECTS
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/projects">
+                <Button variant="outline" className="w-full border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white">
+                  VIEW PROJECT
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </Card>
           ))}
         </div>
