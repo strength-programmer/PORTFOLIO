@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="container mx-auto px-4 py-12 lg:py-20">
+      <section className="container mx-auto px-32 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center lg:text-left">
             <p className="text-purple-400">LET'S COLLABORATE</p>
