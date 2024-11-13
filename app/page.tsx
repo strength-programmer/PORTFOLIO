@@ -7,7 +7,7 @@ import { Terminal, ArrowRight, Mail, Github, Linkedin } from 'lucide-react';
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-zinc-900 to-purple-950">
-      <nav className="container mx-auto px-4 py-6">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-white text-xl font-bold">AI REPUBLIC</div>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 items-center">
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="container mx-auto px-32 py-12 lg:py-20">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center lg:text-left">
             <p className="text-purple-400">LET'S COLLABORATE</p>
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12 lg:py-20">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-white">FEATURED PROJECTS</h2>
         </div>
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="container mx-auto px-4 py-8 border-t border-zinc-800">
+      <footer className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-zinc-800">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <Terminal className="text-purple-600" />
