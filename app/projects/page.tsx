@@ -47,50 +47,52 @@ export default function Projects() {
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">ALL PROJECTS</h1>
         <p className="text-gray-400 mb-8 sm:mb-12">Exploring the intersection of AI and real-world solutions</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-[250px] sm:h-[300px] w-full">
+            <div key={index} className="group bg-black/40 backdrop-blur-sm border border-purple-500/20 rounded-lg overflow-hidden hover:border-purple-500/40 transition-all duration-300">
+              <div className="relative h-48">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover brightness-50 group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover opacity-60 saturate-50"
                 />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90" />
+              </div>
+              
+              <div className="p-6 space-y-4">
+                <h3 className="text-xl font-bold text-purple-400 tracking-tight">{project.title}</h3>
+                
+                <div className="space-y-4">
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-purple-400 mb-3 sm:mb-4">{project.title}</h3>
-                    <div className="space-y-3 sm:space-y-4">
-                      <div>
-                        <h4 className="text-purple-400 font-semibold mb-1">PROBLEM:</h4>
-                        <p className="text-gray-300 text-xs sm:text-sm">{project.problem}</p>
-                      </div>
-                      <div>
-                        <h4 className="text-purple-400 font-semibold mb-1">SOLUTION:</h4>
-                        <p className="text-gray-300 text-xs sm:text-sm">{project.solution}</p>
-                      </div>
-                    </div>
+                    <h4 className="text-purple-400 text-sm font-semibold uppercase tracking-wider mb-2">PROBLEM:</h4>
+                    <p className="text-gray-400 text-sm leading-relaxed">{project.problem}</p>
                   </div>
                   
                   <div>
-                    <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
-                      {project.tools.map((tool, toolIndex) => (
-                        <span 
-                          key={toolIndex}
-                          className="text-xs px-2 py-1 rounded-full bg-purple-900/50 text-purple-300"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-                    <Button 
-                      className="w-full bg-purple-600 hover:bg-purple-700 text-sm sm:text-base"
-                    >
-                      VIEW PROJECT
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <h4 className="text-purple-400 text-sm font-semibold uppercase tracking-wider mb-2">SOLUTION:</h4>
+                    <p className="text-gray-400 text-sm leading-relaxed">{project.solution}</p>
                   </div>
+                </div>
+                
+                <div className="pt-4 space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tools.map((tool, toolIndex) => (
+                      <span
+                        key={toolIndex}
+                        className="text-xs px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Button
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium tracking-wide"
+                  >
+                    VIEW PROJECT
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
                 </div>
               </div>
             </div>
