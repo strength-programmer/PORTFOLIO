@@ -73,7 +73,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-2">SOLUTION:</h3>
               <p className="text-gray-400 mb-6 text-sm sm:text-base">{project.solution}</p>
               <Link href="/projects">
-                <Button variant="outline" className="w-full border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white">
+                <Button variant="outline" className="w-full bg-purple-600 text-white hover:bg-purple-800 hover:text-white">
                   VIEW PROJECT
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
