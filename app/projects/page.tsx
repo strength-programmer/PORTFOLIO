@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
@@ -43,6 +44,18 @@ const projects = [
 export default function Projects() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-zinc-900 to-purple-950">
+      <nav className="container mx-auto px-4 py-6">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="text-white text-xl font-bold">AI REPUBLIC</div>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 items-center">
+            <Link href="/" className="text-gray-300 hover:text-white">Home</Link>
+            <Link href="#" className="text-gray-300 hover:text-white">About</Link>
+            <Link href="/projects" className="text-gray-300 hover:text-white">Projects</Link>
+            <Link href="#" className="text-gray-300 hover:text-white">Skills</Link>
+            <Button className="bg-purple-600 hover:bg-purple-700">CONTACT</Button>
+          </div>
+        </div>
+      </nav>
       <div className="container mx-auto px-4 py-8 sm:py-12">
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">ALL PROJECTS</h1>
         <p className="text-gray-400 mb-8 sm:mb-12">Exploring the intersection of AI and real-world solutions</p>
