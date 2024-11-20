@@ -51,7 +51,7 @@ export default function Projects() {
             <Link href="/" className="text-gray-300 hover:text-white">Home</Link>
             <Link href="#" className="text-gray-300 hover:text-white">About</Link>
             <Link href="/projects" className="text-gray-300 hover:text-white">Projects</Link>
-            <Link href="#" className="text-gray-300 hover:text-white">Skills</Link>
+            <Link href="/skills" className="text-gray-300 hover:text-white">Skills</Link>
             <Button className="bg-purple-600 hover:bg-purple-700">CONTACT</Button>
           </div>
         </div>
