@@ -1,3 +1,5 @@
+// Created by Danielle Bagaforo Meer
+// Let's Connect : https://www.linkedin.com/in/algorexph/
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -88,6 +90,8 @@ const projects = [
   
 ];
 
+// Created by Danielle Bagaforo Meer
+// Let's Connect : https://www.linkedin.com/in/algorexph/
 export default function Projects() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-zinc-900 to-purple-950">
