@@ -8,70 +8,74 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { Terminal } from 'lucide-react';
 
+// Add your Skills here
+// {name : [Skill] }
 const skillCategories = [
   {
     title: "FEATURED",
     skills: [
-      { name: "React", icon: "⚛️" },
-      { name: "CSS", icon: "🎨" },
-      { name: "HTML", icon: "📄" },
-      { name: "JavaScript", icon: "📜" },
-      { name: "Next.js", icon: "▲" },
-      { name: "SASS", icon: "💅" },
-      { name: "Flutter", icon: "📱" }
+      { name: "React" },
+      { name: "CSS"},
+      { name: "HTML" },
+      { name: "JavaScript" },
+      { name: "Next.js" },
+      { name: "SASS" },
+      { name: "Flutter" }
     ]
   },
   {
     title: "FRONTEND",
     skills: [
-      { name: "React", icon: "⚛️" },
-      { name: "CSS", icon: "🎨" },
-      { name: "HTML", icon: "📄" },
-      { name: "JavaScript", icon: "📜" },
-      { name: "Next.js", icon: "▲" },
-      { name: "SASS", icon: "💅" },
-      { name: "Flutter", icon: "📱" }
+      { name: "React" },
+      { name: "CSS"},
+      { name: "HTML" },
+      { name: "JavaScript" },
+      { name: "Next.js" },
+      { name: "SASS" },
+      { name: "Flutter" }
     ]
   },
   {
     title: "BACKEND",
     skills: [
-      { name: "Node.js", icon: "🟢" },
-      { name: "Python", icon: "🐍" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "GraphQL", icon: "📊" },
-      { name: "Docker", icon: "🐳" }
+      { name: "React" },
+      { name: "CSS"},
+      { name: "HTML" },
+      { name: "JavaScript" },
+      { name: "Next.js" },
+      { name: "SASS" },
+      { name: "Flutter" }
     ]
   }
 ];
 
 const technologies = {
   featured: [
-    { name: "TensorFlow", icon: "🧠" },
-    { name: "PyTorch", icon: "🔥" },
-    { name: "Scikit-learn", icon: "🤖" },
-    { name: "OpenAI API", icon: "🌟" },
-    { name: "Keras", icon: "⚡" },
-    { name: "Pandas", icon: "🐼" },
-    { name: "NumPy", icon: "📊" },
-    { name: "CUDA", icon: "💻" },
-    { name: "OpenCV", icon: "👁️" },
-    { name: "Hugging Face", icon: "🤗" }
+    { name: "React" },
+      { name: "CSS"},
+      { name: "HTML" },
+      { name: "JavaScript" },
+      { name: "Next.js" },
+      { name: "SASS" },
+      { name: "Flutter" }
   ],
   frontend: [
-    { name: "React", icon: "⚛️" },
-    { name: "Vue.js", icon: "💚" },
-    { name: "Angular", icon: "🅰️" },
-    { name: "Svelte", icon: "🔥" },
-    { name: "TypeScript", icon: "📘" }
+    { name: "React" },
+    { name: "CSS"},
+    { name: "HTML" },
+    { name: "JavaScript" },
+    { name: "Next.js" },
+    { name: "SASS" },
+    { name: "Flutter" }
   ],
   backend: [
-    { name: "Python", icon: "🐍" },
-    { name: "Node.js", icon: "💚" },
-    { name: "Django", icon: "🎯" },
-    { name: "FastAPI", icon: "⚡" },
-    { name: "Flask", icon: "🌶️" }
+    { name: "React" },
+      { name: "CSS"},
+      { name: "HTML" },
+      { name: "JavaScript" },
+      { name: "Next.js" },
+      { name: "SASS" },
+      { name: "Flutter" }
   ]
 };
 
