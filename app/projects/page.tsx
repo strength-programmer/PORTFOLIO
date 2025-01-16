@@ -13,7 +13,7 @@ const projects = [
     problem: "Problem",
     solution: "Solution",
     tools: ["Python", "TensorFlow", "Apache Kafka", "MongoDB"],
-    link : "https://www.Github.com" // Github Link make sure it has https://
+    link : "https://github.com/strength-programmer/AI_First_Day_3_Activity_6" // Github Link make sure it has https://
   },
   {
     title: "Project_2",

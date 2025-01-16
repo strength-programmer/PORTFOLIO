@@ -84,18 +84,18 @@ export default function Home() {
 
 const projects = [
   { 
-    title: "Project_1", 
+    title: "Atlas: BuhatAI", 
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&fit=crop",
     problem: "Inefficient stock management leading to lost sales, excess inventory, and stock issues: 41.5%",
     solution: "Developed an inventory optimization tool using machine learning to forecast demand and optimize stock levels, resulting in a 35% reduction in stockouts and a 40% decrease in holding costs.",
-    link : "http://github.com"
+    link : "https://github.com/strength-programmer/AI_First_Day_3_Activity_6"
   },
   {
-    title: "Project_2",
+    title: "Sales Agent",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&fit=crop",
     problem: "Inefficient stock management leading to lost sales, excess inventory, and stock issues: 41.5%",
     solution: "Developed an inventory optimization tool using machine learning to forecast demand and optimize stock levels, resulting in a 35% reduction in stockouts and a 40% decrease in holding costs.",
-    link : "http://github.com"
+    link : "https://github.com/strength-programmer/SALES_AGENT"
   },
   {
     title: "Project_3",
