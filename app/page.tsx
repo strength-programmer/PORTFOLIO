@@ -17,7 +17,7 @@ export default function Home() {
           <div className="space-y-6 text-center lg:text-left">
             <p className="text-purple-400">LET'S COLLABORATE</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              I'M [NAME],<br />
+              I'M JULIAN,<br />
               AN AI ENGINEER
             </h1>
             <p className="text-gray-400 max-w-xl mx-auto lg:mx-0"> 
@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex justify-center items-center">
             <div className="relative w-72 h-72 sm:w-96 sm:h-96">
               <Image
-                src="https://raw.githubusercontent.com/ALGOREX-PH/AI-Republic-Student-Portfolio-Template/refs/heads/main/app/images/Erwin.jpeg" // Change to your Photo Please
+                src="https://raw.githubusercontent.com/strength-programmer/PORTFOLIO/refs/heads/main/app/images/Julian.jpg" // Change to your Photo Please
                 alt="Profile"
                 fill
                 className="rounded-3xl object-cover"
