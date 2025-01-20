@@ -80,12 +80,12 @@ const projects = [
     link : "https://www.Github.com" // Github Link make sure it has https://
   },
   {
-    title: "Project_10",
+    title: "Schedule and Itinerary Generator",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
     problem: "Problem",
     solution: "Solution",
     tools: ["Python", "TensorFlow", "Apache Kafka", "MongoDB"],
-    link : "https://www.Github.com" // Github Link make sure it has https://
+    link : "https://github.com/strength-programmer/Schedule-Generator" // Github Link make sure it has https://
   },
   
 ];

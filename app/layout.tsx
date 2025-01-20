@@ -9,7 +9,7 @@ import { Terminal } from 'lucide-react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AI Engineer Portfolio | Erwin Caluag',
+  title: 'AI Engineer Portfolio | Julian Carl Oñate',
   description: 'AI Engineer specializing in machine learning and data analysis',
 };
 
